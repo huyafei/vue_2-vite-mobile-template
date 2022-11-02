@@ -1,0 +1,27 @@
+/* color palette from <https://github.com/vuejs/theme> */
+:root {
+  --vt-c-white: #ffffff;
+  --vt-c-black: #000000;
+  --vt-c-blue: #1989fa;
+  --vt-c-red: #ee0a24;
+  --vt-c-orange: #ff976a;
+  --vt-c-green: #07c160;
+}
+
+/* semantic color variables for this project */
+:root {
+  --color-white-text: var(--vt-c-white);
+  --color-black-text: var(--vt-c-black);
+  --color-blue-text: var(--vt-c-blue);
+  --color-red-text: var(--vt-c-red);
+  --color-orange-text: var(--vt-c-orange);
+  --color-green-text: var(--vt-c-green);
+
+
+  --color-white-background: var(--vt-c-white);
+  --color-blue-background: var(--vt-c-blue);
+  --color-red-background: var(--vt-c-red);
+  --color-orange-background: var(--vt-c-orange);
+  --color-green-background: var(--vt-c-green);
+  --section-gap: 160px;
+}

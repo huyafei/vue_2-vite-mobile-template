@@ -1,0 +1,122 @@
+@import "color.css";
+
+/* global styles */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  /*font-family: Microsoft YaHei, Arial, sans-serif;*/
+  /*阻止旋转屏幕时自动调整字体大小*/
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  /* 解决IOS默认滑动很卡的情况 */
+  -webkit-overflow-scrolling: touch;
+}
+
+html,
+body {
+  /*width: 100%;*/
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 1.4rem;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  color: var(--color-black-text);
+  background-color: var(--color-white-background);
+  line-height: 1.15;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li,
+ol,
+dl,
+dt,
+dd,
+img,
+button {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+ul,
+li,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--color-blue-text);
+}
+
+a:hover,
+a:active,
+a:focus {
+  text-decoration: none;
+  /*文本下的一条线*/
+  /*text-decoration: underline;*/
+  /*穿过文本下的一条线*/
+  /*text-decoration:line-through;*/
+}
+
+table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+table, thead, tbody, tfoot {
+
+}
+
+tr, th, td {
+
+}
+
+textarea,
+input,
+select,
+option {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+menu,
+nav,
+section {
+  display: block;
+}
+
+span,
+img {
+  display: inline-block;
+}
