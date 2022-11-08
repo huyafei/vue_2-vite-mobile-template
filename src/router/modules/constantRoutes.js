@@ -23,7 +23,7 @@ const constantRoutes = [
     component: () =>
       import(
         /* webpackChunkName: "pageError" */ "../../views/pageError/404.vue"
-        ),
+      ),
   },
   {
     path: "/401",
@@ -34,7 +34,7 @@ const constantRoutes = [
     component: () =>
       import(
         /* webpackChunkName: "pageError" */ "../../views/pageError/401.vue"
-        ),
+      ),
   },
 ];
 export default constantRoutes;

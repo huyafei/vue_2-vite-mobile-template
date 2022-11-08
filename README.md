@@ -1,22 +1,28 @@
 # vue_2-vite-mobile-template
 
-该模板将帮助您开始在Vite中使用Vue 3进行开发。
+该模版是作为从[vensst-cli](https://huyafei.github.io/yfhu-blog/cli/)中下载的模板，在 `package.json` 中设置了模板变量，
+所以如果你直接 clone 代码后需要将其删除，或者使用 [vensst-cli](https://huyafei.github.io/yfhu-blog/cli/) 脚手架下载模版。
 
-## 安装
+## Project setup
 
-```sh
+```
 npm install
 ```
 
-### 运行
+### Compiles and hot-reloads for development
 
-```sh
-npm run dev
+```
+npm serve
 ```
 
-### 编译
+### Compiles and minifies for production
 
-```sh
-npm run build
+```
+npm build
 ```
 
+### Lints and fixes files
+
+```
+npm lint
+```

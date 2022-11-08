@@ -6,24 +6,33 @@
 -->
 <script>
 export default {
-  name: 'Navbar',
-}
+  name: "Navbar",
+};
 </script>
 <script setup>
-import {getCurrentInstance,ref, reactive, toRefs, computed, watch, onMounted, nextTick} from "vue"
+import {
+  getCurrentInstance,
+  ref,
+  reactive,
+  toRefs,
+  computed,
+  watch,
+  onMounted,
+  nextTick,
+} from "vue";
 
 const _this = getCurrentInstance().proxy.$root;
 
-const onClickLeft=()=> {
-  _this.$router.go(-1)
-}
+const onClickLeft = () => {
+  _this.$router.go(-1);
+};
 </script>
 <template>
   <van-nav-bar
-      v-bind="$attrs"
-      v-on="$listeners"
-      @click-left="onClickLeft"
-      safe-area-inset-top
+    v-bind="$attrs"
+    v-on="$listeners"
+    @click-left="onClickLeft"
+    safe-area-inset-top
   >
     <template #left>
       <slot name="left"></slot>

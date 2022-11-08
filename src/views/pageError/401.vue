@@ -11,7 +11,7 @@ export default {
   props: {},
   data() {
     return {
-      text: "抱歉，您没有权限"
+      text: "抱歉，您没有权限",
     };
   },
   computed: {},

@@ -7,7 +7,7 @@
   </div>
 </template>
 <script>
-import {useUserStore} from "@/stores/user";
+import { useUserStore } from "@/stores/user";
 export default {
   name: "My",
   components: {},
@@ -16,8 +16,8 @@ export default {
     const userStore = useUserStore();
 
     const logOut = () => {
-      userStore._userLogOut()
-    }
+      userStore._userLogOut();
+    };
     return {
       logOut,
     };

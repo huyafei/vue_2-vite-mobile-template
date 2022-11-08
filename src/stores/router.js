@@ -4,21 +4,19 @@
  * @date: 2022/11/1 21:36
  * @author: yf_hu
  */
-import {defineStore} from 'pinia'
+import { defineStore } from "pinia";
 export const useRouterStore = defineStore({
-  id: 'router',
+  id: "router",
   state: () => ({
-    cachedViews:[]
+    cachedViews: [],
   }),
-  getters: {
-
-  },
+  getters: {},
   actions: {
     addCachedViews: function (view) {
-      if (this.cachedViews.includes(view.name)) return
+      if (this.cachedViews.includes(view.name)) return;
       if (view.meta.isCache) {
-        this.cachedViews.push(view.name)
+        this.cachedViews.push(view.name);
       }
-    }
-  }
-})
+    },
+  },
+});

@@ -6,13 +6,13 @@
  */
 
 /*
-* @params meta {Object} 路由元信息
-* - @params title {String} 路由标题
-* - @params roles {Array} 路由权限
-* - @params isCache {Boolean} 是否缓存
-* 缓存
-*
-* */
+ * @params meta {Object} 路由元信息
+ * - @params title {String} 路由标题
+ * - @params roles {Array} 路由权限
+ * - @params isCache {Boolean} 是否缓存
+ * 缓存
+ *
+ * */
 const constantRoutes = [
   {
     path: "/",
@@ -20,7 +20,8 @@ const constantRoutes = [
   },
   {
     path: "/home",
-    component: () => import(/* webpackChunkName: "home" */ "@/views/layout/layout.vue"),
+    component: () =>
+      import(/* webpackChunkName: "home" */ "@/views/layout/layout.vue"),
     redirect: "/home/index",
     children: [
       {
@@ -37,7 +38,8 @@ const constantRoutes = [
   },
   {
     path: "/classify",
-    component: () => import(/* webpackChunkName: "classify" */ "@/views/layout/layout.vue"),
+    component: () =>
+      import(/* webpackChunkName: "classify" */ "@/views/layout/layout.vue"),
     redirect: "/classify/index",
     children: [
       {
@@ -50,7 +52,7 @@ const constantRoutes = [
         component: () =>
           import(
             /* webpackChunkName: "classify" */ "@/views/classify/index.vue"
-            ),
+          ),
       },
     ],
   },

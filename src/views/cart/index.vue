@@ -3,7 +3,7 @@
     <VenNavbar title="购物车"></VenNavbar>
     <div class="page-content">
       内容
-      <input type="text">
+      <input type="text" />
     </div>
   </div>
 </template>

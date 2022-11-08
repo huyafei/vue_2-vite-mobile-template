@@ -2,8 +2,8 @@
   <div class="main-content page">
     <VenNavbar title="分类"></VenNavbar>
     <div class="page-content">
-      内容
-      <input type="text">
+      缓存页面
+      <input type="text" />
     </div>
   </div>
 </template>

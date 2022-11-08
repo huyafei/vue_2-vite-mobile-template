@@ -9,6 +9,6 @@ export default {
     confirm: "确定",
     cancel: "取消",
     search: "搜索",
-    lang:"语言",
-  }
-}
+    lang: "语言",
+  },
+};

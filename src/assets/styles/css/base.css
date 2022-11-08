@@ -26,8 +26,10 @@ body {
 }
 
 body {
-  font-size: 1.4rem;
-  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-size: 14px;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
   color: var(--color-black-text);
   background-color: var(--color-white-background);
   line-height: 1.15;
@@ -81,12 +83,15 @@ table {
   border-collapse: collapse;
 }
 
-table, thead, tbody, tfoot {
-
+table,
+thead,
+tbody,
+tfoot {
 }
 
-tr, th, td {
-
+tr,
+th,
+td {
 }
 
 textarea,

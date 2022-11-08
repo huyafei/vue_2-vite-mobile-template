@@ -11,16 +11,14 @@ export default {
   props: {},
   data() {
     return {
-      text: "哦豁，页面不见了"
+      text: "哦豁，页面不见了",
     };
   },
   computed: {},
   watch: {},
-  created() {
-  },
-  mounted() {
-  },
-  methods: {}
+  created() {},
+  mounted() {},
+  methods: {},
 };
 </script>
 <style scoped lang="less"></style>

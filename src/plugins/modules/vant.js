@@ -4,9 +4,24 @@
  * @date: 2022/10/20 9:57
  * @author: yf_hu
  */
-import Vue from 'vue'
-import {Locale, Button, Field, Form, Icon, Cell, CellGroup, Tabbar, TabbarItem, NavBar, RadioGroup, Radio,Picker, Popup    } from 'vant';
-import {getLanguage,messages} from "@/lang";
+import Vue from "vue";
+import {
+  Locale,
+  Button,
+  Field,
+  Form,
+  Icon,
+  Cell,
+  CellGroup,
+  Tabbar,
+  TabbarItem,
+  NavBar,
+  RadioGroup,
+  Radio,
+  Picker,
+  Popup,
+} from "vant";
+import { getLanguage, messages } from "@/lang";
 
 const language = getLanguage();
 Locale.use(language, messages[language]);
@@ -24,6 +39,3 @@ Vue.use(RadioGroup);
 Vue.use(Radio);
 Vue.use(Picker);
 Vue.use(Popup);
-
-
-

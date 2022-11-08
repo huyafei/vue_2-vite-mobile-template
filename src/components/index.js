@@ -6,10 +6,13 @@
  */
 import Vue from "vue";
 
-const modules = import.meta.glob(['./**/*.vue'], {eager: true})
+const modules = import.meta.glob(["./**/*.vue"], { eager: true });
 
-const prefix = 'Ven'
+const prefix = "Ven";
 
 for (let modulesKey in modules) {
-  Vue.component(prefix +  modules[modulesKey].default.name, modules[modulesKey].default)
+  Vue.component(
+    prefix + modules[modulesKey].default.name,
+    modules[modulesKey].default
+  );
 }

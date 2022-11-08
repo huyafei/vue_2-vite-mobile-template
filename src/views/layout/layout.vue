@@ -1,33 +1,36 @@
 <script setup>
-import {computed, getCurrentInstance, onMounted, watch} from 'vue'
-import {useRouterStore} from "@/stores/router";
+import { computed, getCurrentInstance, onMounted, watch } from "vue";
+import { useRouterStore } from "@/stores/router";
 
 const _this = getCurrentInstance().proxy;
 const routerStore = useRouterStore();
 
-const cachedViews = computed(() => routerStore.cachedViews)
-const key = computed(() => _this.$route.path)
+const cachedViews = computed(() => routerStore.cachedViews);
+const key = computed(() => _this.$route.path);
 
-watch(() => _this.$route, () => {
-  addCachedViews()
-})
+watch(
+  () => _this.$route,
+  () => {
+    addCachedViews();
+  }
+);
 
 const addCachedViews = function () {
-  const {name} = _this.$route
+  const { name } = _this.$route;
   if (name) {
-    routerStore.addCachedViews(_this.$route)
+    routerStore.addCachedViews(_this.$route);
   }
-}
+};
 onMounted(() => {
-  addCachedViews()
-})
+  addCachedViews();
+});
 </script>
 <template>
   <div class="layout">
     <div class="main">
-        <keep-alive :include="cachedViews">
-          <router-view :key="key"/>
-        </keep-alive>
+      <keep-alive :include="cachedViews">
+        <router-view :key="key" />
+      </keep-alive>
     </div>
     <VenTabbar></VenTabbar>
   </div>

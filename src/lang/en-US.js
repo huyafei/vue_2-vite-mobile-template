@@ -9,6 +9,6 @@ export default {
     confirm: "Confirm",
     cancel: "Cancel",
     search: "Search",
-    lang:"Language",
-  }
-}
+    lang: "Language",
+  },
+};
