@@ -6,7 +6,7 @@ import vue2 from "@vitejs/plugin-vue2";
 
 import usePluginImport from "vite-plugin-importer";
 
-const _fileURLToPath = __dirname => fileURLToPath(new URL(__dirname, import.meta.url));
+const _fileURLToPath = (__dirname) => fileURLToPath(new URL(__dirname, import.meta.url));
 
 // https://vitejs.dev/config/
 export default defineConfig(({ command, mode }) => {
@@ -14,25 +14,25 @@ export default defineConfig(({ command, mode }) => {
     // 开发或生产环境服务的公共基础路径，https://cn.vitejs.dev/config/shared-options.html
     base: loadEnv(mode, process.cwd()).VITE_PROJECT_BASE,
     build: {
-      outDir: "dist"
+      outDir: "dist",
     },
     plugins: [
       vue2(),
       legacy({
         targets: ["ie >= 11"],
-        additionalLegacyPolyfills: ["regenerator-runtime/runtime"]
+        additionalLegacyPolyfills: ["regenerator-runtime/runtime"],
       }),
       // 按需引入 vant
       usePluginImport({
         libraryName: "vant",
         libraryDirectory: "es",
         // style: true,
-        style: (name) => `${name}/style/less`
-      })
+        style: (name) => `${name}/style/less`,
+      }),
     ],
     resolve: {
       alias: {
-        // 针对 vite3 + vant2.7 自定主题特殊处理，否则报错, 出现的问题默认会给body设置了一个font-size: 12px
+        // 针对 vite3 + vant2.7 自定主题特殊处理，否则报错
         "~@vant": _fileURLToPath("./node_modules/@vant"),
         "@": _fileURLToPath("./src"),
         "@api": _fileURLToPath("./src/api"),
@@ -41,25 +41,27 @@ export default defineConfig(({ command, mode }) => {
         "@router": _fileURLToPath("./src/router"),
         "@plugins": _fileURLToPath("./src/plugins"),
         "@utils": _fileURLToPath("./src/utils"),
-        "@views": _fileURLToPath("./src/views")
-      }
+        "@views": _fileURLToPath("./src/views"),
+      },
     },
     css: {
       preprocessorOptions: {
         less: {
           javascriptEnabled: true,
           additionalData: `
-                @import "${_fileURLToPath("./src/assets/styles/less/mixin.less")}";
+                @import "${_fileURLToPath(
+                  "./src/assets/styles/less/mixin.less"
+                )}";
                 `,
           modifyVars: {
             // 直接覆盖变量
             // '@green': 'red',
             // 'border-color': '#eee',
             // 或者可以通过 less 文件覆盖（文件路径为绝对路径）
-            hack: `true; @import "/src/assets/styles/less/vant.less";`
-          }
-        }
-      }
+            hack: `true; @import "/src/assets/styles/less/vant.less";`,
+          },
+        },
+      },
     },
     // 开发服务器配置，https://cn.vitejs.dev/config/server-options.html#server-proxy
     server: {
@@ -81,12 +83,12 @@ export default defineConfig(({ command, mode }) => {
         //   target: 'ws://localhost:3000',
         //   ws: true
         // }
-      }
+      },
     },
     // 引入第三方的配置
     optimizeDeps: {
-      include: []
-    }
+      include: [],
+    },
   };
   if (mode === "development") {
     const plugins = [];
@@ -96,8 +98,8 @@ export default defineConfig(({ command, mode }) => {
     config.build.terserOptions = {
       compress: {
         drop_console: true,
-        drop_debugger: true
-      }
+        drop_debugger: true,
+      },
     };
   }
   return config;

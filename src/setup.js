@@ -10,17 +10,16 @@ import pinia from "@/stores/pinia";
 import App from "./App.vue";
 import router from "./router";
 import { i18n } from "./lang";
+import "lib-flexible";
 // 引入组件
 import "./components";
 // 加载插件
 import "./plugins";
 
-import "lib-flexible";
 import "./assets/styles/css/main.css";
 import "./assets/styles/less/index.less";
 
 Vue.use(PiniaVuePlugin);
-
 new Vue({
   router,
   pinia,

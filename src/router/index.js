@@ -1,12 +1,13 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import pinia from "@/stores/pinia";
+import { useUserStore } from "@/stores/user";
+import cookies from "@plugins/modules/cookies";
 
 Vue.use(VueRouter);
 
 import constantRoutes from "./modules/constantRoutes";
 import asyncRoutes from "./modules/asyncRoutes";
-import cookies from "@plugins/modules/cookies";
 
 // 处理路由跳转报错
 const originalPush = VueRouter.prototype.push;
@@ -22,12 +23,12 @@ VueRouter.prototype.replace = function replace(location, resolve, reject) {
   return originalPush.call(this, location).catch((e) => {});
 };
 
-import { useUserStore } from "@/stores/user";
+const routes = [...constantRoutes, ...asyncRoutes];
 
 let router = new VueRouter({
-  mode: "history", // 或者 'hash'
+  mode: "hash", // 或者 'history'
   base: window.$global.basePath,
-  routes: [...constantRoutes, ...asyncRoutes],
+  routes,
 });
 const whiteList = ["Login", "Page404", "Page401"];
 

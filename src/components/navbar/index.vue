@@ -34,13 +34,13 @@ const onClickLeft = () => {
     @click-left="onClickLeft"
     safe-area-inset-top
   >
-    <template #left>
+    <template v-if="$slots.left" #left>
       <slot name="left"></slot>
     </template>
-    <template #title>
+    <template v-if="$slots.title" #title>
       <slot name="title"></slot>
     </template>
-    <template #right>
+    <template v-if="$slots.right" #right>
       <slot name="right"></slot>
     </template>
   </van-nav-bar>

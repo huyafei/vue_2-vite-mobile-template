@@ -16,6 +16,7 @@ import router from "@router";
  *
  */
 const instance = axios.create({
+  // eslint-disable-next-line no-undef
   baseURL: $global.baseURL,
   timeout: 10000,
   headers: {},

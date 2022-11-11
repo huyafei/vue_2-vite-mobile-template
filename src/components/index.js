@@ -7,7 +7,6 @@
 import Vue from "vue";
 
 const modules = import.meta.glob(["./**/*.vue"], { eager: true });
-
 const prefix = "Ven";
 
 for (let modulesKey in modules) {

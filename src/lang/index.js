@@ -6,8 +6,6 @@
  */
 import Vue from "vue";
 import VueI18n from "vue-i18n";
-
-Vue.use(VueI18n);
 import cookies from "@plugins/modules/cookies";
 
 import enUS from "vant/es/locale/lang/en-US";
@@ -15,6 +13,8 @@ import zhCN from "vant/es/locale/lang/zh-CN";
 
 import enLocale from "./en-US";
 import zhLocale from "./zh-CN";
+
+Vue.use(VueI18n);
 
 export const messages = {
   "en-US": {
