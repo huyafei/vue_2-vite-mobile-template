@@ -1,6 +1,6 @@
 /**
  * @name: cookies
- * @description：cookies.js
+ * @description: cookies.js
  * @date: 2022/10/20 17:37
  * @author: yf_hu
  */

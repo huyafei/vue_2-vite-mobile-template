@@ -1,6 +1,6 @@
 /**
  * @name: constant
- * @description：constant.js
+ * @description: constant.js
  * @date: 2022/1/6 13:19
  * @author: yf_hu
  */

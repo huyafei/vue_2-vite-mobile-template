@@ -4,7 +4,6 @@
   </div>
 </template>
 <script>
-import { onMounted, nextTick } from "vue";
 export default {
   name: "app",
   provide() {
@@ -18,6 +17,7 @@ export default {
     };
   },
   setup() {},
+  mounted() {},
   methods: {
     reload() {
       this.isRouterAlive = false;

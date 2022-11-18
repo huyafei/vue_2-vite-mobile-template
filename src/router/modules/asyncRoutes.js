@@ -1,6 +1,6 @@
 /**
  * @name: asyncRoutes
- * @description：asyncRoutes.js
+ * @description: asyncRoutes.js
  * @date: 2022/1/6 13:49
  * @author: yf_hu
  */

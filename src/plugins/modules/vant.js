@@ -1,6 +1,6 @@
 /**
  * @name: vant
- * @description：vant.js
+ * @description: vant.js
  * @date: 2022/10/20 9:57
  * @author: yf_hu
  */

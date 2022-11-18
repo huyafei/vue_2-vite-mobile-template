@@ -1,6 +1,6 @@
 /**
  * @name: axios
- * @description：axios.js
+ * @description: axios.js
  * @date: 2022/10/20 11:12
  * @author: yf_hu
  */

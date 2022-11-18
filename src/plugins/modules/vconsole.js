@@ -1,6 +1,6 @@
 /**
  * @name: vconsole
- * @description：vconsole.js
+ * @description: vconsole.js
  * @date: 2022/10/21 15:33
  * @author: yf_hu
  */

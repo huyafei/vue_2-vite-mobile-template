@@ -27,7 +27,7 @@ const routes = [...constantRoutes, ...asyncRoutes];
 
 let router = new VueRouter({
   mode: "hash", // 或者 'history'
-  base: window.$global.basePath,
+  base: import.meta.env.VITE_PROJECT_BASE,
   routes,
 });
 const whiteList = ["Login", "Page404", "Page401"];

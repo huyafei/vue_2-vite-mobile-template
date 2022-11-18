@@ -1,6 +1,6 @@
 /**
  * @name: echarts
- * @description：echarts.js
+ * @description: echarts.js
  * @date: 2022/10/27 10:19
  * @author: yf_hu
  */

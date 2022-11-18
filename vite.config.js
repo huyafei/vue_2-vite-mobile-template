@@ -65,11 +65,12 @@ export default defineConfig(({ command, mode }) => {
     },
     // 开发服务器配置，https://cn.vitejs.dev/config/server-options.html#server-proxy
     server: {
-      https: false, // 是否开启 https
-      open: false, // 是否自动在浏览器打开
-      port: 9527, // 开发服务器端口号
       // 可以被手机访问的地址
       // host: "0.0.0.0",
+      host: "localhost", // 开发服务器主机名
+      port: 9527, // 开发服务器端口号
+      https: false, // 是否开启 https
+      open: false, // 是否自动在浏览器打开
       proxy: {
         // "/api": {
         //   target: "http://example-development.com", // 代理后台接口

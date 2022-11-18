@@ -1,6 +1,6 @@
 <!--
  * @name: index
- * @description：index.vue
+ * @description: index.vue
  * @date: 2022/10/27 12:46
  * @author: yf_hu
 -->
