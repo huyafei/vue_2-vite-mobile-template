@@ -6,7 +6,8 @@ import vue2 from "@vitejs/plugin-vue2";
 
 import usePluginImport from "vite-plugin-importer";
 
-const _fileURLToPath = (__dirname) => fileURLToPath(new URL(__dirname, import.meta.url));
+const _fileURLToPath = (__dirname) =>
+  fileURLToPath(new URL(__dirname, import.meta.url));
 
 // https://vitejs.dev/config/
 export default defineConfig(({ command, mode }) => {
@@ -19,7 +20,8 @@ export default defineConfig(({ command, mode }) => {
     plugins: [
       vue2(),
       legacy({
-        targets: ["ie >= 11"],
+        // targets: ["ie >= 11"],
+        targets: ["defaults", "not ie < 9"],
         additionalLegacyPolyfills: ["regenerator-runtime/runtime"],
       }),
       // 按需引入 vant
@@ -67,7 +69,7 @@ export default defineConfig(({ command, mode }) => {
     server: {
       // 可以被手机访问的地址
       // host: "0.0.0.0",
-      host: "localhost", // 开发服务器主机名
+      // host: "localhost", // 开发服务器主机名
       port: 9527, // 开发服务器端口号
       https: false, // 是否开启 https
       open: false, // 是否自动在浏览器打开

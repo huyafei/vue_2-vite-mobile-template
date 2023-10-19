@@ -5,6 +5,6 @@
  * @author: yf_hu
  */
 import Vue from "vue";
-import * as jstk from "@vensst/js-toolkit";
+import jsToolkit from "@vensst/js-toolkit";
 
-Vue.prototype.$jstk = jstk;
+Vue.prototype.$jsToolkit = jsToolkit;

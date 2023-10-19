@@ -5,7 +5,7 @@
  * @author: yf_hu
  */
 import Vue from "vue";
-import Cookies from "js-cookie";
+import { Cookies } from "@vensst/js-toolkit";
 import { version } from "../../../package.json";
 
 const prefix = `__${version}__`;

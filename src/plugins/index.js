@@ -8,4 +8,4 @@ const modules = import.meta.glob(["./modules/**/*.js"], { eager: true });
 
 for (let modulesKey in modules) {
   const module = modules[modulesKey];
-};
+}
